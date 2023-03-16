@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Decatur High School and City Schools of Decatur Grade Statistics">
+    <title>IA Website</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <div class="content_wrap"> 
+            <h1 class="introduction">Grades at Decatur High School</h1>
+            <a href="https://www.csdecatur.net/dhs" class="intro" id="intro-image"><img src="dhs.png" alt="Decatur High School Logo" width="250"></a>
+            <ol class="toc">
+                <li class="toc_list">
+                    <a href="#first_link_section" class="link_section_first">
+                        <span class="">Stat 1</span>
+                    </a>
+                </li>
+                <li class="toc_list">
+                    <a href="#second_link_section" class="link_section_second">
+                        <span class="">Stat 2</span>
+                    </a>
+                </li>
+                <li class="toc_list">
+                    <a href="#third_link_section" class="link_section_third">
+                        <span class="">Stat 3</span>
+                    </a>
+                </li>
+            </ol>
+        </div>
+   </header>
+   <main>
+    <section class="section_one">
+        <a id="first_link_section"></a>
+        <div class="content_wrap">
+        <h2 id="stats-title1">STAR Data</h2>
+        <h4 id="key-title1">Key for Statistic 1</h4>
+        <ul class="stats-key">
+            <li>xyz</li>
+        </ul>
+        </div>
+        <form action="">
+        <fieldset>
+            <legend>Graph Data</legend>
+            <input id="checkbox1" name="checkboxlist" 
+            type="checkbox" value="12th" checked>
+            <label for="checkbox1" class="firstcheckbox">12th</label>
+            <input id="checkbox2" name="checkboxlist" 
+            type="checkbox" value="11th" checked>
+            <label for="checkbox2" class="firstcheckbox">11th</label>
+            <input id="checkbox3" name="checkboxlist"
+            type="checkbox" value="10th" checked>
+            <label for="checkbox3" class="firstcheckbox">10th</label>
+            <input id="checkbox4" name="checkboxlist"
+            type="checkbox" value="9th" checked>
+            <label for="checkbox4" class="firstcheckbox">9th</label>
+        </fieldset>
+        </form>
+        <div class="container">
+            <canvas id="first_chart"></canvas>
+        </div>
+        <script>
+            const ctx = document.getElementById('first_chart');
+
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['12th', '11th', '10th', '9th'],
+                    datasets: [{
+                        label: 'Star Score',
+                        data: [97, 85, 73, 66],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            })
+        </script>
+        <form action="">
+            <label for="data-one">Enter Data</label>
+            <input name="data" id="data-one" type="text" required placeholder="Enter">
+            <button type="submit">submit</button>
+        </form> 
+        <table class="styled">
+            <tr>
+                <th>Grade</th>
+                <th>Avg Score</th>
+                <th>  Std Dev</th>
+            </tr>
+           <tr>
+            <td>12th</td>
+           </tr>
+           <tr>
+            <td>11th</td>
+           </tr>
+           <tr>
+            <td>10th</td>
+           </tr>
+           <tr>
+            <td>9th</td>
+           </tr>
+        </table>
+        <form action="">
+            <label for="date">Date</label>
+            <input id="date" name="date" type="date">
+            <button type="submit">Sumbit</button>
+        </form>
+    </section>
+    <section class="section_two">
+        <div class="content_wrap">
+            <a id="second_link_section"></a>
+            <h2 id="stats-title2">Statistic 2</h2>
+            <h4 id="key-title2">Key for Statistic 2</h4>
+            <ul class="stats-key">
+                <li>def</li>
+            </ul>
+        </div>
+    </section>
+    <section class="section_three">
+        <div class="content_wrap">
+            <a id="third_link_section"></a>
+            <h2 id="stats-title3">Statistic 3</h2>
+            <h4 id="key-title3">Key for Statistic 3</h4>
+            <ul class="stats-key">
+                <li>def</li>
+            </ul>
+        </div>
+    </section>
+    </main>
+    <footer>
+        <div class="content_wrap">
+            <h2>Footer</h2>
+                <ul>
+                    <li class="footer_list">
+                        <a href="https://www.csdecatur.net/dhs">DHS Website</a>
+                    </li>
+                    <li class="footer_list">
+                    <a href="credits.html">Credits</a>
+                    </li>
+                    <li class="footer_list">
+                    <a href="">Source Code</a>
+                    </li>
+                </ul>
+        </div>
+    </footer>
+</body>
+</html>
